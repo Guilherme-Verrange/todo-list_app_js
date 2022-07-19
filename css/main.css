@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    background-color: rgb(13, 12, 12);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.todo-list{
+
+    width: 100%;
+    max-width: 600px;
+}
+
+.todo-list header{
+
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding: 15px;
+    background-color: #de3f53;
+    color: #fff;
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.list-task ul.list{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+   
+}
+
+.list-task ul.list li{
+
+    position: relative;
+    background-color: #262e4c;
+    border-bottom: 1px solid #1c2340;
+    color: #b1b2c9;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 300ms ease;
+
+}
+
+.list-task ul.list li.hidden{
+
+    display: none;
+}
+
+.list-task ul.list li:hover{
+
+    background-color: #323b5c;
+}
+
+.list-task ul.list li:hover button.remove-task{
+
+    opacity: 1;
+
+}
+
+
+.list-task ul.list .check-list{
+
+    position: relative;
+    background-color: #404a6e;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.list-task ul.list .done .check-list::after{
+
+    position: absolute;
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+
+}
+
+
+.list-task ul.list .done .task{
+
+    text-decoration: line-through;
+}
+
+
+
+
+
+.list-task button.remove-task{
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: red;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.list-task button.remove-task::after{
+
+    content: 'x';
+    color: white;
+    display: block;
+}
+
+.todo-list footer input{
+    background-color: #171d37;
+    border: none;
+    outline: none;
+    width: 93.4%;
+    padding: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+
+
+
